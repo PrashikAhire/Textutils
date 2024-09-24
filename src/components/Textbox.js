@@ -15,6 +15,8 @@ export default function Textbox(props) {
   const handleclrclick = ()=>{
     let newtext = "";
     setText(newtext);
+    props.showAlert("Text is Cleared ! ","success");
+
 }
 const handleCopy= ()=>{
   console.log("copied!!!");
@@ -27,6 +29,8 @@ const handleCopy= ()=>{
 const handlespace = ()=>{
   let newtext = text.split(/[ ] +/);
   setText(newtext.join(" "));
+    props.showAlert("Spaces Removed! ","success");
+
 }
   const  handleOnchange= (event)=>{
             setText(event.target.value);
